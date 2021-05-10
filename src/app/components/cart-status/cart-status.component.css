@@ -1,0 +1,26 @@
+.badge {
+    font-size: 50%;
+    width: 34px;
+    height: 10px;
+    padding-top: 9px;
+    border-radius: 4px;
+    font-size: medium;
+    padding-bottom: 13px;
+    
+
+}
+.badge-default {
+    width: 85px;
+}
+.badge-danger {
+  width: 20px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: initial;
+  
+}
+.fa-shopping-cart:before {
+   padding-left: 5px;
+}
