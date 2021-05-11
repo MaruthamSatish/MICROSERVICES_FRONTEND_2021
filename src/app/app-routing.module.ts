@@ -1,23 +1,49 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { ProductGridComponent } from './components/product-grid/product-grid.component';
-import { ProductComponent } from './components/product/product.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {CartDetailsComponent} from './components/cart-details/cart-details.component';
+import {CheckoutComponent} from './components/checkout/checkout.component';
+import {MainComponent} from './components/main/main.component';
+import {ProductGridComponent} from './components/product-grid/product-grid.component';
+import {ProductComponent} from './components/product/product.component';
 
-
-
-const routes: Routes = [{ path:'Men/:categoryId', component:ProductGridComponent },
-{ path:'Women/:categoryId', component:ProductGridComponent },
-{ path:'products/:productId', component:ProductComponent },
-{ path:'Kids/:categoryId', component:ProductGridComponent },
-{ path:'mobile/:categoryId', component:ProductGridComponent },
-{ path:'home', component:MainComponent },
-{ path:'', redirectTo:'/home',pathMatch:'full'},
-{ path:'**', redirectTo:'/home',pathMatch:'full'}
+const routes : Routes = [
+    {
+        path: 'Men/:categoryId',
+        component: ProductGridComponent
+    }, {
+        path: 'Women/:categoryId',
+        component: ProductGridComponent
+    }, {
+        path: 'products/:productId',
+        component: ProductComponent
+    }, {
+        path: 'checkout',
+        component: CheckoutComponent
+    }, {
+        path: 'Kids/:categoryId',
+        component: ProductGridComponent
+    }, {
+        path: 'cart-details',
+        component: CartDetailsComponent
+    }, {
+        path: 'mobile/:categoryId',
+        component: ProductGridComponent
+    }, {
+        path: 'home',
+        component: MainComponent
+    }, {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    }, {
+        path: '**',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

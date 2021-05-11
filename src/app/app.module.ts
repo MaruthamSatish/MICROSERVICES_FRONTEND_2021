@@ -11,7 +11,10 @@ import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CartStatusComponent } from './components/cart-status/cart-status.compon
     ProductGridComponent,
     ProductComponent,
     MainComponent,
-    CartStatusComponent
+    CartStatusComponent,
+    CartDetailsComponent,
+    CheckoutComponent
+    
 
 
   ],
@@ -29,7 +35,8 @@ import { CartStatusComponent } from './components/cart-status/cart-status.compon
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

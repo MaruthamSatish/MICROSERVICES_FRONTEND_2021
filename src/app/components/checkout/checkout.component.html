@@ -1,0 +1,118 @@
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+    <div formGroupName="customer" class="container col-md-4 border">
+        <p class="h4 mb-4">Customer</p>
+
+        <!-- First Name -->
+        <input type="text" formControlName="firstName" mdbInput class="form-control mb-4" placeholder="First Name">
+
+        <!-- Last Name -->
+        <input type="text" formControlName="lastName" mdbInput class="form-control mb-4" placeholder="Last Name">
+
+        <!-- Email -->
+        <input type="email" formControlName="email" id="defaultContactFormEmail" mdbInput class="form-control mb-4"
+            placeholder="E-mail">
+
+    </div>
+    <br>
+    <!--Shipping Address -->
+    <div formGroupName="shippingAddress" class="container col-md-4 border">
+        <p class="h4 mb-4">Shipping Address</p>
+
+        <!-- Country -->
+        <label>Country</label>
+        <select formControlName="country" class="browser-default custom-select mb-4">
+            <option value="" disabled>Choose option</option>
+            <option value="1" selected>India</option>
+            <option value="2">USA</option>
+        </select>
+        <!-- Street-->
+        <input type="text" formControlName="street" mdbInput class="form-control mb-4" placeholder="Street">
+
+        <!-- City -->
+        <input type="text" formControlName="city" mdbInput class="form-control mb-4" placeholder="City">
+
+        <!-- State -->
+        <label>State</label>
+        <select formControlName="state" class="browser-default custom-select mb-4">
+            <option value="" disabled>Choose option</option>
+            <option value="1" selected>Andhra Pradesh</option>
+            <option value="2">USA</option>
+        </select>
+
+        <!-- ZipCode -->
+        <input type="text" formControlName="zipCode" mdbInput class="form-control mb-4" placeholder="ZipCode">
+    </div>
+    <br>
+    <!-- Default unchecked -->
+    <mdb-checkbox [default]="true" (change)="copyShippingAddressToBillingAddress($event)">Is Billing Address is Same As
+        Shipping Address</mdb-checkbox>
+    <!--Billing Address -->
+    <div formGroupName="billingAddress" class="container col-md-4 border">
+        <p class="h4 mb-4">Billing Address</p>
+
+        <!-- Country -->
+        <label>Country</label>
+        <select formControlName="country" class="browser-default custom-select mb-4">
+            <option value="" disabled>Choose option</option>
+            <option value="1" selected>India</option>
+            <option value="2">USA</option>
+        </select>
+        <!-- Street-->
+        <input type="text" formControlName="street" mdbInput class="form-control mb-4" placeholder="Street">
+
+        <!-- City -->
+        <input type="text" formControlName="city" mdbInput class="form-control mb-4" placeholder="City">
+
+        <!-- State -->
+        <label>State</label>
+        <select formControlName="state" class="browser-default custom-select mb-4">
+            <option value="" disabled>Choose option</option>
+            <option value="1" selected>Andhra Pradesh</option>
+            <option value="2">USA</option>
+        </select>
+
+        <!-- ZipCode -->
+        <input type="text" formControlName="zipCode" mdbInput class="form-control mb-4" placeholder="ZipCode">
+    </div>
+    <br>
+    <div formGroupName="creditCard" class="container col-md-4 border">
+        <p class="h4 mb-4">Credit Card</p>
+
+        <!-- Card Type -->
+
+        <label>Card Type</label>
+        <select formControlName="cardType" class="browser-default custom-select mb-4">
+            <option value="" disabled>Choose option</option>
+            <option value="1" selected>Visa</option>
+            <option value="2">Master Card</option>
+        </select>
+
+
+        <!-- Name on Card-->
+        <input type="text" formControlName="nameOnCard" mdbInput class="form-control mb-4" placeholder="Name On Card">
+
+        <!-- Card Number -->
+        <input type="text" formControlName="cardNumber" mdbInput class="form-control mb-4" placeholder="Card Number">
+
+        <input type="text" formControlName="securityCode" mdbInput class="form-control mb-4"
+            placeholder="Security Code">
+        <!-- Expiration Month -->
+        <label>Expiration Month</label>
+        <select formControlName="expirationMonth" class="browser-default custom-select mb-4">
+            <option value="" disabled selected>Choose option</option>
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+        </select>
+        <!-- Expiration Year -->
+        <label>Expiration Year</label>
+        <select formControlName="expirationYear" class="browser-default custom-select mb-4">
+            <option value="" disabled selected>Choose option</option>
+            <option value="1">2021</option>
+            <option value="2">2022</option>
+        </select>
+    </div>
+    <br>
+    <button type="submit" mdbBtn color="primary" mdbWavesEffect>Purchase</button>
+</form>
+<!-- Default form contact -->
