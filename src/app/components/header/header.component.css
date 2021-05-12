@@ -1,23 +1,26 @@
 .logoImage{
-    height: 63px!important;
-    
+    height:65px;
     margin-left: -102px;
 }
 .nav-link{
     padding: 0 43px 28px!important;
     text-align: center!important;
     text-decoration: none!important;
-    font-size: 14px!important;
+    font-size: 21px!important;
     letter-spacing: .3px;
     color:white !important;
     border-bottom: none!important;
     -webkit-transition: left .2s ease-out,width .2s ease-out!important;
     transition: left .2s ease-out,width .2s ease-out!important;
     font-weight: 500!important;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold!important;
+    font-size: 12px;
 }
 .fa-3x.cartIcon {
     margin-left: -14px;
+}
+.navbar-nav.ml-auto.navbarLink{
+    margin-top: 30px;
 }
 

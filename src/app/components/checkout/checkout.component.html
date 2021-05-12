@@ -1,8 +1,12 @@
-<!-- Default form contact -->
-<form class="text-center border border-light p-5" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
-    <div formGroupName="customer" class="container col-md-4 border">
-        <p class="h4 mb-4">Customer</p>
-
+<br>
+<br>
+<form [formGroup]="checkoutFormGroup" class="checkOutForm" (ngSubmit)="onSubmit()">
+    
+  <mdb-card  class="col-md-4">
+    
+    <div formGroupName="customer">
+        <p class="h4 mb-4">Customer </p>
+  
         <!-- First Name -->
         <input type="text" formControlName="firstName" mdbInput class="form-control mb-4" placeholder="First Name">
 
@@ -14,13 +18,15 @@
             placeholder="E-mail">
 
     </div>
+    </mdb-card>
     <br>
     <!--Shipping Address -->
-    <div formGroupName="shippingAddress" class="container col-md-4 border">
+    <mdb-card  class="col-md-4">
+    <div formGroupName="shippingAddress">
         <p class="h4 mb-4">Shipping Address</p>
 
         <!-- Country -->
-        <label>Country</label>
+        <label class="displayLabel">Country</label>
         <select formControlName="country" class="browser-default custom-select mb-4">
             <option value="" disabled>Choose option</option>
             <option value="1" selected>India</option>
@@ -33,7 +39,7 @@
         <input type="text" formControlName="city" mdbInput class="form-control mb-4" placeholder="City">
 
         <!-- State -->
-        <label>State</label>
+        <label class="displayLabel">State</label>
         <select formControlName="state" class="browser-default custom-select mb-4">
             <option value="" disabled>Choose option</option>
             <option value="1" selected>Andhra Pradesh</option>
@@ -43,16 +49,18 @@
         <!-- ZipCode -->
         <input type="text" formControlName="zipCode" mdbInput class="form-control mb-4" placeholder="ZipCode">
     </div>
+ </mdb-card>
     <br>
     <!-- Default unchecked -->
     <mdb-checkbox [default]="true" (change)="copyShippingAddressToBillingAddress($event)">Is Billing Address is Same As
         Shipping Address</mdb-checkbox>
     <!--Billing Address -->
-    <div formGroupName="billingAddress" class="container col-md-4 border">
+    <mdb-card  class="col-md-4">    
+        <div formGroupName="billingAddress">
         <p class="h4 mb-4">Billing Address</p>
 
         <!-- Country -->
-        <label>Country</label>
+        <label class="displayLabel">Country</label>
         <select formControlName="country" class="browser-default custom-select mb-4">
             <option value="" disabled>Choose option</option>
             <option value="1" selected>India</option>
@@ -65,7 +73,7 @@
         <input type="text" formControlName="city" mdbInput class="form-control mb-4" placeholder="City">
 
         <!-- State -->
-        <label>State</label>
+        <label class="displayLabel">State</label>
         <select formControlName="state" class="browser-default custom-select mb-4">
             <option value="" disabled>Choose option</option>
             <option value="1" selected>Andhra Pradesh</option>
@@ -75,13 +83,15 @@
         <!-- ZipCode -->
         <input type="text" formControlName="zipCode" mdbInput class="form-control mb-4" placeholder="ZipCode">
     </div>
+    </mdb-card>
     <br>
-    <div formGroupName="creditCard" class="container col-md-4 border">
+    <mdb-card  class="col-md-4">
+    <div formGroupName="creditCard">
         <p class="h4 mb-4">Credit Card</p>
 
         <!-- Card Type -->
 
-        <label>Card Type</label>
+        <label class="displayLabel">Card Type</label>
         <select formControlName="cardType" class="browser-default custom-select mb-4">
             <option value="" disabled>Choose option</option>
             <option value="1" selected>Visa</option>
@@ -98,20 +108,21 @@
         <input type="text" formControlName="securityCode" mdbInput class="form-control mb-4"
             placeholder="Security Code">
         <!-- Expiration Month -->
-        <label>Expiration Month</label>
+        <label class="displayLabel">Expiration Month</label>
         <select formControlName="expirationMonth" class="browser-default custom-select mb-4">
             <option value="" disabled selected>Choose option</option>
             <option value="1">Jan</option>
             <option value="2">Feb</option>
         </select>
         <!-- Expiration Year -->
-        <label>Expiration Year</label>
+        <label class="displayLabel">Expiration Year</label>
         <select formControlName="expirationYear" class="browser-default custom-select mb-4">
             <option value="" disabled selected>Choose option</option>
             <option value="1">2021</option>
             <option value="2">2022</option>
         </select>
     </div>
+    </mdb-card>
     <br>
     <button type="submit" mdbBtn color="primary" mdbWavesEffect>Purchase</button>
 </form>

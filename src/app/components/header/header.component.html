@@ -1,36 +1,31 @@
 <!--Main Navigation-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark peach-gradient btn-lg btn  fixed-top scrolling-navbar">
-    <mdb-navbar-brand>
+<mdb-navbar SideClass="navbar navbar-expand-sm navbar-dark peach-gradient scrolling-navbar">
     <a routerLink="/products">
-        <a class="navbar-brand" href="#"><img id="Easy Buy" src="../assets/Easy Buy/linkedin_banner_image_1.png"
-                alt="Easy Buy" class="logoImage"></a>
-    </a>
-    </mdb-navbar-brand>
-
-    <links>
-        <ul class="navbar-nav mr-auto mt-lg-0">
-            <li class="nav-item" *ngFor="let tempCat of categories">
+        <img class="logoImage"  id="Easy Buy" src="../assets/Easy Buy/logo_transparent.png" alt="Easy Buy"> 
+     </a>
+<links>
+   
+    
+    <ul class="navbar-nav ml-auto navbarLink">
+            <li *ngFor="let tempCat of categories">
                 <a class="nav-link" routerLink="/{{tempCat.categoryName}}/{{tempCat.categoryId}}"
                     (click)="productsByCategoryId(tempCat)">{{tempCat.categoryName}}</a>
             </li>
         </ul>
-        <ul>
+        <ul class="navbar-nav ml-auto navbarLink">
             <li>
                 <form class="form-inline waves-effect waves-light">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search Your Product" aria-label="Search">
 
                 </form>
             </li>
         </ul>
-
-        <ul class="navbar-nav ml-auto nav-flex-icons">
+       <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link">
-                     <app-cart-status></app-cart-status>
-                </a>
+              
+                 <app-cart-status></app-cart-status>
+             
             </li>
-
-
         </ul>
     </links>
 </mdb-navbar>

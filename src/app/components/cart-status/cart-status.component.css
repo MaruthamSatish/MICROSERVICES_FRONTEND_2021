@@ -21,10 +21,12 @@
   box-sizing: initial;
   
 }
-.fa-shopping-cart:before {
-   padding-left: 5px;
-}
+
 .fa, .fas {
   font-weight: 900;
   color: white;
+}
+.cartCountH {
+  padding-top: -12px !important;
+  padding-bottom: -71px !important;
 }

@@ -1,23 +1,27 @@
-<br>
-    <br>
-        <br>
-            <br>
+           <br>
                 <div class="container .col-md-8">
                     <div *ngIf="cartItems.length > 0">
-                        <table mdbTable bordered="true">
-
+                    <mdb-card>
+                        <table mdbTable>
+                          <thead>
                             <tr class="peach-gradient">
 
-                                <th style="width:10%" scope="col">Product Image</th>
-                                <th style="width:20%" scope="col">Product Details</th>
-                                <th style="width:20%" scope="col"></th>
+                                <th style="width:10%" scope="col"></th>
+                                <th style="width:10%" scope="col"><h4>Product</h4></th>
+                                <th style="width:10%" scope="col"><h4>Price</h4></th>
+                                <th style="width:15%" scope="col"><h4>Quantity</h4></th>
+                                <th style="width:10%" scope="col"><h4>Amount</h4></th>
+                                <th style="width:10%" scope="col"></th>
 
                             </tr>
+                         </thead>
+                         <tbody>
                             <tr mdbTableCol *ngFor="let tempCartItem of cartItems">
                                 <td><img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image"></td>
                                     <td>
-                                       <p>{{tempCartItem.productName}}</p>-<p>{{tempCartItem.productPrice | currency: 'INR'}}</p>
+                                       <p>{{tempCartItem.productName}}</p>
                                     </td>
+                                    <td><p>{{tempCartItem.productPrice | currency: 'INR'}}</p></td>
                                         <td>
                                             
                                             <div>
@@ -29,24 +33,30 @@
                                                     <button type="button" (click)="decrementQuantity(tempCartItem)" size="sm" mdbBtn color="primary" mdbWavesEffect>
                                                         <i class="fas fa-minus"></i>
                                                     </button>
-                                                    <button type="button" mdbBtn (click)="removeCartItem(tempCartItem)" size="sm" color="danger" mdbWavesEffect>Remove</button>
+                                                    
                                                 </div>
-                                                <span>SubTotal: {{tempCartItem.quantity*tempCartItem.productPrice | currency: 'INR'}}</span>
+                                                
                                                
                                             </div>
                                         </td>
-                                     
+                                        <td><span>{{tempCartItem.quantity*tempCartItem.productPrice | currency: 'INR'}}</span></td>
+                                         <td><button type="button" (click)="removeCartItem(tempCartItem)" size="sm" mdbBtn color="danger" mdbWavesEffect>
+                                                <i class="fas fa-times" aria-hidden="true"></i>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"></td>
+                                        <td colspan="5"></td>
                                         <td>
-                                            <p>Total Quantity: {{totalQuantity}}</p>
+                                            <h4>Total Quantity : {{totalQuantity}} </h4>
                                             <p><mdb-badge pill="true" default="true">Shipping Free</mdb-badge></p>
-                                            <p>Total Price: {{totalPrice | currency:'INR'}}</p>
+                                            <h4>Total Price : {{totalPrice | currency:'INR'}}</h4>
                                             <button type="button" mdbBtn color="primary" routerLink="/checkout" mdbWavesEffect>Checkout</button>
                                         </td>
                                     </tr>
+                                 </tbody>
                                </table>
+                            </mdb-card>
                             </div>
                             <div *ngIf="cartItems.length == 0">
                                 <div class="alert alert-primary" role="alert">
