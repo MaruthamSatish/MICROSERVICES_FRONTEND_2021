@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private productAPIURl = "http://localhost:9091";
+  private productAPIURl = "http://localhost:31372";
   constructor(private httpClient: HttpClient) { }
   getProductsByCategoryId(categoryId): Observable<any> {
     return this.httpClient.get(`${this.productAPIURl}/api/products//category/${categoryId}`);

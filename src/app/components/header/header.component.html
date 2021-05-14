@@ -15,8 +15,8 @@
         <ul class="navbar-nav ml-auto navbarLink">
             <li>
                 <form class="form-inline waves-effect waves-light">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search Your Product" aria-label="Search">
-
+                    <input #searchProdKey (keyup.enter)="searchProductByName(searchProdKey.value)" class="form-control mr-sm-2" type="text" placeholder="Search Your Product" aria-label="Search">
+                  
                 </form>
             </li>
         </ul>

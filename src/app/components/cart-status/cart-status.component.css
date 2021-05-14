@@ -6,8 +6,6 @@
     border-radius: 4px;
     font-size: medium;
     padding-bottom: 13px;
-    
-
 }
 .badge-default {
     width: 85px;
@@ -15,18 +13,16 @@
 .badge-danger {
   width: 20px;
 }
-*,
-*::before,
-*::after {
-  box-sizing: initial;
-  
-}
-
-.fa, .fas {
+.fa,.fas {
   font-weight: 900;
   color: white;
 }
 .cartCountH {
   padding-top: -12px !important;
   padding-bottom: -71px !important;
+  margin-top: -43px;
+  font-size: 50%;
+  margin-left: 23px;
+  color: red;
+  font:Trebuchet MS;
 }

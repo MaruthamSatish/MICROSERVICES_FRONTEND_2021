@@ -38,4 +38,7 @@ export class HeaderComponent implements OnInit {
 
     })
   }
+  searchProductByName(searchKey: string){
+    console.log(searchKey);
+  }
 }
