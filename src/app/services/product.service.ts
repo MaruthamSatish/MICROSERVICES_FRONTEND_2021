@@ -12,6 +12,6 @@ export class ProductService {
     return this.httpClient.get(`${this.productAPIURl}/api/products//category/${categoryId}`);
   }
   getProductById(productId): Observable<any> {
-    return this.httpClient.get(`${this.productAPIURl}/api/products/${productId}`);
+    return this.httpClient.get(`${this.productAPIURl}/api/products//${productId}`);
   }
 }
