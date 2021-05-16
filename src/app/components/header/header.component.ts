@@ -14,7 +14,43 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class HeaderComponent implements OnInit {
   categories: Category[];
+  product: Product;
+  categories2: Category[]=[
+    {
+      "categoryId": 1,
+      "categoryName": "Men",
+      "CategoryResourceId":1
+      
+      
+    },
+    {
+      "categoryId": 2,
+      "categoryName": "Women",
+      "CategoryResourceId":1
+      
+      
+      
+    },
+    {
+      "categoryId": 3,
+      "categoryName": "Kids",
+      "CategoryResourceId":1,
+      
+      
+      
+      
+    },
+    {
+      "categoryId": 4,
+      "categoryName": "New Arrival",
+      "CategoryResourceId":1
+      
+      
+      
+    }
+  ];
   productsByCategory: Product[];
+  productsByCategory1: Product[];
   constructor(private activatedRoutes: ActivatedRoute, private categoryService: CategoryService, private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -38,6 +74,14 @@ export class HeaderComponent implements OnInit {
 
     })
   }
+  productsByCategoryId1(category: any) {
+    const categoryId = +this.activatedRoutes.snapshot.paramMap.get(category.categoryId);
+    this.productService.getProductsByCategoryId1(category.categoryId).subscribe(data => {
+      this.productsByCategory = data;
+
+    })
+    //this.productService.getProductsByCategoryId1(category.categoryId);
+   }
   searchProductByName(searchKey: string){
     console.log(searchKey);
   }

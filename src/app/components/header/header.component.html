@@ -7,9 +7,9 @@
    
     
     <ul class="navbar-nav ml-auto navbarLink">
-            <li *ngFor="let tempCat of categories">
+            <li *ngFor="let tempCat of categories2">
                 <a class="nav-link" routerLink="/{{tempCat.categoryName}}/{{tempCat.categoryId}}"
-                    (click)="productsByCategoryId(tempCat)">{{tempCat.categoryName}}</a>
+                    (click)="productsByCategoryId1(tempCat)">{{tempCat.categoryName}}</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto navbarLink">
