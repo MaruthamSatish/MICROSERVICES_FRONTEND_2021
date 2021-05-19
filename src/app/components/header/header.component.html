@@ -1,47 +1,40 @@
 <!--Main Navigation-->
-<mdb-navbar SideClass="navbar navbar-expand-sm navbar-dark peach-gradient scrolling-navbar">
+<mdb-navbar
+    SideClass="navbar navbar-expand-lg navbar-dark peach-gradient">
     <a routerLink="/products">
-        <img class="logoImage"  id="Easy Buy" src="../assets/Easy Buy/logo_transparent.png" alt="Easy Buy"> 
-     </a>
-<links>
-   
-    
-    <ul class="navbar-nav ml-auto navbarLink">
-            <li *ngFor="let tempCat of categories2">
-                <a class="nav-link" routerLink="/{{tempCat.categoryName}}/{{tempCat.categoryId}}"
+        <img
+            class="logoImage"
+            id="Easy Buy"
+            src="../assets/Easy Buy/logo_transparent.png"
+            alt="Easy Buy"></a>
+        <links>
+
+            <mdb-navbar-brand *ngFor="let tempCat of categories2">
+                <a
+                    class="nav-link"
+                    routerLink="/{{tempCat.categoryName}}/{{tempCat.categoryId}}"
                     (click)="productsByCategoryId1(tempCat)">{{tempCat.categoryName}}</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto navbarLink">
-            <li>
+            </mdb-navbar-brand>
+
+            <mdb-navbar-brand>
                 <form class="form-inline waves-effect waves-light">
-                    <input #searchProdKey (keyup.enter)="searchProductByName(searchProdKey.value)" class="form-control mr-sm-2" type="text" placeholder="Search Your Product" aria-label="Search">
-                  
-                </form>
-            </li>
-        </ul>
-       <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              
-                 <app-cart-status></app-cart-status>
-             
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <diV></diV>
-                <diV></diV>
-            </li>
-        </ul>
-        <br>
-        <br>
-        <br>
-        <br>
-        <ul class="navbar-nav ml-auto signUp">
-            <li class="nav-item">
-                <app-user-signup></app-user-signup> 
-            </li>
-        </ul>
-       
-    </links>
-</mdb-navbar>
+                    <input
+                        #searchProdKey
+                        (keyup.enter)="searchProductByName(searchProdKey.value)"
+                        class="form-control mr-sm-2"
+                        type="text"
+                        placeholder="Search Your Product"
+                        aria-label="Search"></form>
+                </mdb-navbar-brand>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+               
+                <mdb-navbar-brand>
+                    <app-cart-status></app-cart-status>
+                </mdb-navbar-brand>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                <mdb-navbar-brand>
+                    <app-user-signup></app-user-signup>
+                </mdb-navbar-brand>
+               
+            </links>
+        </mdb-navbar>

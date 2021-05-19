@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       "categoryId": 4,
-      "categoryName": "New Arrival",
+      "categoryName": "NewArrival",
       "CategoryResourceId":1
       
       
