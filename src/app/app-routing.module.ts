@@ -5,6 +5,7 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
 import {MainComponent} from './components/main/main.component';
 import {ProductGridComponent} from './components/product-grid/product-grid.component';
 import {ProductComponent} from './components/product/product.component';
+import { UserSignupComponent } from './components/user-signup/user-signup.component';
 
 const routes : Routes = [
     {
@@ -25,7 +26,13 @@ const routes : Routes = [
     }, {
         path: 'cart-details',
         component: CartDetailsComponent
-    }, {
+    }, 
+    
+    {
+        path: 'user-signup',
+        component: UserSignupComponent
+    }, 
+    {
         path: 'mobile/:categoryId',
         component: ProductGridComponent
     }, {

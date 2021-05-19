@@ -15,6 +15,7 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
 import { CheckoutComponent } from './components/checkout/checkout.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserSignupComponent } from './components/user-signup/user-signup.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     CartStatusComponent,
     CartDetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    UserSignupComponent
     
 
 
