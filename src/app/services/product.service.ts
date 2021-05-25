@@ -6,15 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private productAPIURl = "http://localhost:31372";
+  private productAPIURl = "http://localhost:9097";
   constructor(private httpClient: HttpClient) { }
   getProductsByCategoryId(categoryId): Observable<any> {
-    return this.httpClient.get(`${this.productAPIURl}/api/products//category/${categoryId}`);
+    return this.httpClient.get(`${this.productAPIURl}/product-service/api/products//category/${categoryId}`);
   }
   getProductById(productId): Observable<any> {
-    return this.httpClient.get(`${this.productAPIURl}/api/products//${productId}`);
+    return this.httpClient.get(`${this.productAPIURl}/product-service/api/products//${productId}`);
   }
   getProductsByCategoryId1(categoryId): Observable<any> {
-    return this.httpClient.get(`${this.productAPIURl}/api/products//category/${categoryId}`);
+    return this.httpClient.get(`${this.productAPIURl}/product-service/api/products//category/${categoryId}`);
   }
 }

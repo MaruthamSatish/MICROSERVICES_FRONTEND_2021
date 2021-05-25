@@ -16,6 +16,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
+import { AccountInfoComponent } from './components/account-info/account-info.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
     CartStatusComponent,
     CartDetailsComponent,
     CheckoutComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    AccountInfoComponent,
+    OrdersComponent
     
 
 

@@ -1,11 +1,20 @@
 .fa-3x.signUp {
     margin-left: 14px;
 }
-.fa,.fas {
+.fa,
+.fas {
     font-weight: 900;
     color: white;
-  }
-  .signUpSignInBtn{
-      width: 220px;
-  }
+}
+.signUpSignInBtn {
+    width: 220px;
+}
+.img-fluid {
+    max-width: 49%;
+    height: auto;
+}
+.profileImage{
+  margin-left:10px;
+  color: white;
 
+}

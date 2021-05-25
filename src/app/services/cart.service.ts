@@ -11,7 +11,6 @@ export class CartService {
     totalQuantity : Subject < number > = new Subject < number > ();
     constructor() {}
     addToCart(theCartItem : CartItem) {
-
         let alreadyExistsInCart : boolean = false;
         let existingCartItem : CartItem = undefined;
         if (this.cartItems.length > 0) {
@@ -19,7 +18,7 @@ export class CartService {
             existingCartItem = this
                 .cartItems
                 .find(tempCartItem => tempCartItem.productId === theCartItem.productId);
-            alreadyExistsInCart = (existingCartItem != undefined);
+                 alreadyExistsInCart = (existingCartItem != undefined);
         }
         if (alreadyExistsInCart) {
             existingCartItem.quantity++;

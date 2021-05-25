@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {AccountInfoComponent} from './components/account-info/account-info.component';
 import {CartDetailsComponent} from './components/cart-details/cart-details.component';
 import {CheckoutComponent} from './components/checkout/checkout.component';
 import {MainComponent} from './components/main/main.component';
 import {ProductGridComponent} from './components/product-grid/product-grid.component';
 import {ProductComponent} from './components/product/product.component';
-import { UserSignupComponent } from './components/user-signup/user-signup.component';
+import {UserSignupComponent} from './components/user-signup/user-signup.component';
 
 const routes : Routes = [
     {
@@ -26,13 +27,13 @@ const routes : Routes = [
     }, {
         path: 'cart-details',
         component: CartDetailsComponent
-    }, 
-    
-    {
+    }, {
         path: 'user-signup',
         component: UserSignupComponent
-    }, 
-    {
+    }, {
+        path: 'app-account-info',
+        component: AccountInfoComponent
+    }, {
         path: 'mobile/:categoryId',
         component: ProductGridComponent
     }, {

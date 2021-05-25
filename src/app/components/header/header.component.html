@@ -9,11 +9,11 @@
             alt="Easy Buy"></a>
         <links>
 
-            <mdb-navbar-brand *ngFor="let tempCat of categories2">
+            <mdb-navbar-brand *ngFor="let tempCat of categories">
                 <a
                     class="nav-link"
                     routerLink="/{{tempCat.categoryName}}/{{tempCat.categoryId}}"
-                    (click)="productsByCategoryId1(tempCat)">{{tempCat.categoryName}}</a>
+                    (click)="productsByCategoryId(tempCat)">{{tempCat.categoryName}}</a>
             </mdb-navbar-brand>
 
             <mdb-navbar-brand>
@@ -26,10 +26,16 @@
                         placeholder="Search Your Product"
                         aria-label="Search"></form>
                 </mdb-navbar-brand>
+                <mdb-navbar-brand>
+                   
+                </mdb-navbar-brand>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                
                 <mdb-navbar-brand>
                     <app-cart-status></app-cart-status>
+                </mdb-navbar-brand>
+                <mdb-navbar-brand>
+                   
                 </mdb-navbar-brand>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                 <mdb-navbar-brand>
