@@ -9,10 +9,10 @@ import { Category } from '../entity/category';
 })
 
 export class CategoryService {
-  private categoryURl = "http://localhost:9097";
+  private categoryURl = "http://localhost:9093";
   constructor(private httpClient: HttpClient) { }
   getCategoryList(): Observable<Category[]> {
-    return this.httpClient.get<Category[]>(`${this.categoryURl}/category-service/api/category`);
+    return this.httpClient.get<Category[]>(`${this.categoryURl}/api/category`);
   }
 
 }

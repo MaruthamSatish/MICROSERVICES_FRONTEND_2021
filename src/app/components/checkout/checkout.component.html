@@ -124,8 +124,19 @@
     </div>
     
     </mdb-card>
-    <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+    <br>
+    <mdb-card  class="col-md-4">
+        <mdb-card-header class="view view-cascade gradient-card-header peach-gradient"> Review Your Order</mdb-card-header>
+            <p>Total Quantity: {{ totalQuantity }}</p>
+            <mdb-badge pill="true" default="true">Shipping: FREE</mdb-badge>
+            
+            <p>Total Price: {{ totalPrice | currency: 'INR' }}</p>
+        </mdb-card>
+    
+    <button type="submit" mdbBtn color="primary" mdbWavesEffect>Purchase</button>
 </form>
 
 </div>
+<br>
+<br>
 <!-- Default form contact -->

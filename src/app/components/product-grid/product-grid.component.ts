@@ -44,7 +44,7 @@ export class ProductGridComponent implements OnInit {
     constructor(private productService : ProductService, private activatedRoutes : ActivatedRoute, private route : Router, private cartService : CartService) {}
 
     ngOnInit() : void {
-        this.productsByCategory1(this.activatedRoutes.snapshot.paramMap.get('categoryId'));
+        this.productsByCategory(this.activatedRoutes.snapshot.paramMap.get('categoryId'));
     }
     productsByCategory(categoryId) : void {
         console.log("categoryId" + categoryId);
