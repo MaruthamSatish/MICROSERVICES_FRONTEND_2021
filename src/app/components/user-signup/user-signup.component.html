@@ -8,12 +8,23 @@
         </a>
     </div>
     <div *ngIf=userLoggedIn class="profileImage">
-      <img
-          src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
-          alt="avatar mx-auto white"
-          class="rounded-circle img-fluid" style="max-width: 130%;"><span><strong>{{responseMessage | titlecase}}</strong></span>
-         
+        <div class="dropdown" mdbDropdown >
+            <img 
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
+              alt="avatar mx-auto white"
+              class="rounded-circle img-fluid dropdown-toggle waves-light" style="max-width: 130%;"
+              mdbDropdownToggle type="button" mdbBtn mdbWavesEffect>
+            
+            <div class="dropdown-menu dropdown-primary">
+                <a routerLink="/app-orders">Your Orders</a>
+            <div class="divider dropdown-divider"></div>
+                <a routerLink="/app-addresses">Your Addresses</a>
+            <div class="divider dropdown-divider"></div>
+                <a routerLink="/app-orders">Profile Setting</a>
+            </div>
     </div>
+          
+   </div>
 
     <div
         mdbModal

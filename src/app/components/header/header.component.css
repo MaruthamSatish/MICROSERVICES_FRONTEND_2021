@@ -23,5 +23,12 @@
 .navbar-nav.ml-auto.navbarLink{
     margin-top: 30px;
 }
-
-
+.searchProduct{
+    margin-left: 55px;
+}
+.headerCart{
+    margin-left: 100px;
+}
+.headerSign{
+    margin-left: 0px;
+}

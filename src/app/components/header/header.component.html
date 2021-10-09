@@ -1,11 +1,14 @@
 <!--Main Navigation-->
+
 <mdb-navbar
     SideClass="navbar navbar-expand-lg navbar-dark peach-gradient">
     <a routerLink="/products">
         <img
-            class="logoImage"
-            id="Easy Buy"
-            src="../assets/Easy Buy/logo_transparent.png"
+           
+             alt="avatar mx-auto white"
+            rounded-circle img-fluidid="Easy Buy"
+            src="../assets/Easy Buy/instagram_profile_image_etb.png"
+            class="logoImage rounded-circle"
             alt="Easy Buy"></a>
         <links>
 
@@ -15,8 +18,8 @@
                     routerLink="/{{tempCat.categoryName}}/{{tempCat.categoryId}}"
                     (click)="productsByCategoryId(tempCat)">{{tempCat.categoryName}}</a>
             </mdb-navbar-brand>
-
-            <mdb-navbar-brand>
+       
+            <mdb-navbar-brand class="searchProduct">
                 <form class="form-inline waves-effect waves-light">
                     <input
                         #searchProdKey
@@ -26,21 +29,13 @@
                         placeholder="Search Your Product"
                         aria-label="Search"></form>
                 </mdb-navbar-brand>
-                <mdb-navbar-brand>
-                   
-                </mdb-navbar-brand>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-               
-                <mdb-navbar-brand>
-                    <app-cart-status></app-cart-status>
-                </mdb-navbar-brand>
-                <mdb-navbar-brand>
-                   
-                </mdb-navbar-brand>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                <mdb-navbar-brand>
-                    <app-user-signup></app-user-signup>
-                </mdb-navbar-brand>
-               
+                    <mdb-navbar-brand class="headerCart">
+                        <app-cart-status></app-cart-status>
+                    </mdb-navbar-brand>
+                    
+                    <mdb-navbar-brand class="headerSign">
+                        <app-user-signup></app-user-signup>
+                    </mdb-navbar-brand>
+       
             </links>
         </mdb-navbar>

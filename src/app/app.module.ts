@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MDBBootstrapModule, WavesModule, DropdownModule,ButtonsModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductGridComponent } from './components/product-grid/product-grid.component';
@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserSignupComponent } from './components/user-signup/user-signup.component';
 import { AccountInfoComponent } from './components/account-info/account-info.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { AddressesComponent } from './components/addresses/addresses.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OrdersComponent } from './components/orders/orders.component';
     CheckoutComponent,
     UserSignupComponent,
     AccountInfoComponent,
-    OrdersComponent
+    OrdersComponent,
+    AddressesComponent
     
 
 
@@ -40,6 +42,9 @@ import { OrdersComponent } from './components/orders/orders.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    WavesModule, 
+    DropdownModule,
+    ButtonsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule

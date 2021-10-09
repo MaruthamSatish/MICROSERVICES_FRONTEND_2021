@@ -18,3 +18,7 @@
   color: white;
 
 }
+.dropdown.show .fadeInDropdown {
+    opacity: 1;
+    margin-left: 96px;
+}
